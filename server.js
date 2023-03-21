@@ -1,12 +1,9 @@
 import "dotenv/config";
-import express from "express";
-import bodyParser from "body-parser";
-import cors from "cors";
-
-import mongoose from "mongoose";
 
 import typeDefs from "./graphql/schema.js";
 import resolvers from "./graphql/resolvers.js";
+
+import dbConnect from "./dbConfig/dbConnect.js";
 
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
@@ -15,10 +12,14 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 const server = new ApolloServer({
     typeDefs,
     resolvers,
+    csrfPrevention: true,
+    cache: "bounded",
   });
 
 const { url } = await startStandaloneServer(server, {
 listen: { port: 4000 },
 });
+
+dbConnect()
 
 console.log(`🚀  Server ready at: ${url}`);
