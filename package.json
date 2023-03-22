@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "npm run build --prefix client",
-    "server": "nodemon -- exec babel-node server.js"
+    "server": "nodemon -- exec babel-node server.js",
+    "test": "mocha"
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,9 @@
     "mongoose": "^7.0.2"
   },
   "devDependencies": {
+    "@graphql-tools/schema": "^9.0.17",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
     "nodemon": "^2.0.21"
   }
 }
