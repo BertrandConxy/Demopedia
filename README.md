@@ -139,7 +139,7 @@ seed data was added successfully
 
 If you run the above url while the server is running, it will open up Apollo server sandbox:
 
-[image]
+![client-test](https://user-images.githubusercontent.com/90222110/226990484-aedc7651-4665-469c-afbb-fcd5cc769acc.PNG)
 
 #### Running the Frontend
 
@@ -160,6 +160,10 @@ Run the development server:
 ```sh
 npm run dev
 ```
+
+##### Quick Preview
+
+![Demopedia](https://user-images.githubusercontent.com/90222110/226990657-afc06859-f89f-4e61-84e8-246fcf2562d3.PNG)
 
 ### Run GraphQL query Tests
 
