@@ -2,13 +2,18 @@ import { useRouter } from 'next/router'
 import Form from '../../components/Common/Form'
 import Back from '../../components/Common/Back'
 import useGetCountry from '../../hooks/useGetCountry'
+import CircularProgress from '@mui/material/CircularProgress'
 
 export default function CountryEdit() {
   const router = useRouter()
   const id = router.query.id
   const { loading, country } = useGetCountry(id)
 
-  return (
+  return loading ? (
+    <div className="flex flex-col justify-center items-center">
+      <CircularProgress size={50} />
+    </div>
+  ) : (
     <div className="bg-white p-4 flex flex-col justify-between border border-1 border-gray-200 shadow-sm">
       <div className="flex items-end">
         <Back />

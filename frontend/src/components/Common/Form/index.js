@@ -45,6 +45,7 @@ export default function Form({ label, Country }) {
       })
       return ''
     }
+
     const countryData = {
       country: country,
       area: parseInt(area),
@@ -64,7 +65,7 @@ export default function Form({ label, Country }) {
           Country Name:
         </label>
         <Input
-          Value={country}
+          value={country}
           onChange={setCountry}
           type="text"
           placeholder="Enter Country Name"
@@ -75,7 +76,7 @@ export default function Form({ label, Country }) {
           Total Population:
         </label>
         <Input
-          Value={totalPopulation}
+          value={totalPopulation}
           onChange={setTotalPopulation}
           type="number"
           placeholder="Enter Total Population"
@@ -86,7 +87,7 @@ export default function Form({ label, Country }) {
           Area(in km²):
         </label>
         <Input
-          Value={area}
+          value={area}
           onChange={setArea}
           type="number"
           placeholder="Enter Country Area in km²"
@@ -97,7 +98,7 @@ export default function Form({ label, Country }) {
           Year Of Record:
         </label>
         <Input
-          Value={year}
+          value={year}
           onChange={setYear}
           placeholder="Enter The year Of Recording"
           type="number"
