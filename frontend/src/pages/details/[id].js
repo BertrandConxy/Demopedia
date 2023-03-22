@@ -1,17 +1,11 @@
-import { useRouter } from 'next/router'
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'
-export default function CountryDetails() {
-  const router = useRouter()
+import Back from "../../components/Common/Back"
 
-  const handleBack = () => {
-    router.back()
-  }
+export default function CountryDetails() {
+
   return (
     <div className="bg-white p-4 flex flex-col justify-between border border-1 border-gray-200 shadow-sm">
       <div className="flex items-end">
-        <button onClick={handleBack}>
-          <ArrowBackIosIcon className="text-3xl" />
-        </button>
+        <Back />
         <h2 className="font-bold">Country Details</h2>
       </div>
       <div className="my-5 pl-8">

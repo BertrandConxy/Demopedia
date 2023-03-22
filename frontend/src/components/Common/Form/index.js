@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import FormInput from './Input'
+import Input from './Input'
 import useAddCountry from '../../hooks/useAddCountry'
 import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
@@ -65,7 +65,7 @@ export default function Form({ label, Country }) {
         <label htmlFor="country" className="text-lg text-gray-800 w-[30%]">
           Country
         </label>
-        <FormInput Value={country} onChange={setCountry} type="text" />
+        <Input Value={country} onChange={setCountry} type="text" />
       </div>
       <div className="flex space-x-5 items-center">
         <label
@@ -74,7 +74,7 @@ export default function Form({ label, Country }) {
         >
           Total Population
         </label>
-        <FormInput
+        <Input
           Value={totalPopulation}
           onChange={setTotalPopulation}
           type="number"
@@ -84,13 +84,13 @@ export default function Form({ label, Country }) {
         <label className="text-lg text-gray-800" htmlFor="area">
           Area (square kilometres)
         </label>
-        <FormInput Value={area} onChange={setArea} type="number" />
+        <Input Value={area} onChange={setArea} type="number" />
       </div>
       <div className="flex space-x-5 items-center">
         <label className="text-lg text-gray-800" htmlFor="year" type="text">
           Year
         </label>
-        <FormInput Value={year} onChange={setYear} />
+        <Input Value={year} onChange={setYear} />
       </div>
       <button
         className="bg-green-500 rounded-lg px-4 py-2 text-center w-32 text-white hover:bg-green-700"
