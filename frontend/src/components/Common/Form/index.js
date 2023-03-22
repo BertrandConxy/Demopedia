@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
-import Input from './Input'
-import useAddCountry from '../../hooks/useAddCountry'
 import { useRouter } from 'next/router'
 import { toast } from 'react-toastify'
-import useUpdateCountry from '../../hooks/useUpdateCountry'
+import Input from './Input'
+import Button from '../Button'
+import useAddCountry from '../../../hooks/useAddCountry'
+import useUpdateCountry from '../../../hooks/useUpdateCountry'
 
 export default function Form({ label, Country }) {
   const [country, setCountry] = useState(null)
@@ -57,48 +58,52 @@ export default function Form({ label, Country }) {
   }
 
   return (
-    <form
-      action=""
-      className="flex flex-col  font-semibold space-y-6 border px-8 py-8 shodow-lg bg-gray-50"
-    >
-      <div className="flex space-x-5 items-center">
-        <label htmlFor="country" className="text-lg text-gray-800 w-[30%]">
-          Country
+    <form action="" className="flex flex-col  font-bold space-y-5 px-8">
+      <div className="flex space-x-3 items-center">
+        <label htmlFor="country" className="w-[30%]">
+          Country Name:
         </label>
-        <Input Value={country} onChange={setCountry} type="text" />
+        <Input
+          Value={country}
+          onChange={setCountry}
+          type="text"
+          placeholder="Enter Country Name"
+        />
       </div>
-      <div className="flex space-x-5 items-center">
-        <label
-          className="text-lg text-gray-800 w-[30%]"
-          htmlFor="totalPopulation"
-        >
-          Total Population
+      <div className="flex space-x-3 items-center">
+        <label className="w-[30%]" htmlFor="totalPopulation">
+          Total Population:
         </label>
         <Input
           Value={totalPopulation}
           onChange={setTotalPopulation}
           type="number"
+          placeholder="Enter Total Population"
         />
       </div>
-      <div className="flex space-x-5 items-center">
-        <label className="text-lg text-gray-800" htmlFor="area">
-          Area (square kilometres)
+      <div className="flex space-x-3 items-center">
+        <label className="w-[30%]" htmlFor="area">
+          Area(in km²):
         </label>
-        <Input Value={area} onChange={setArea} type="number" />
+        <Input
+          Value={area}
+          onChange={setArea}
+          type="number"
+          placeholder="Enter Country Area in km²"
+        />
       </div>
-      <div className="flex space-x-5 items-center">
-        <label className="text-lg text-gray-800" htmlFor="year" type="text">
-          Year
+      <div className="flex space-x-3 items-center">
+        <label className="w-[30%]" htmlFor="year" type="text">
+          Year Of Record:
         </label>
-        <Input Value={year} onChange={setYear} />
+        <Input
+          Value={year}
+          onChange={setYear}
+          placeholder="Enter The year Of Recording"
+          type="number"
+        />
       </div>
-      <button
-        className="bg-green-500 rounded-lg px-4 py-2 text-center w-32 text-white hover:bg-green-700"
-        type="submit"
-        onClick={handleSubmit}
-      >
-        {label}
-      </button>
+      <Button text={label} handleClick={handleSubmit} type="submit" />
     </form>
   )
 }

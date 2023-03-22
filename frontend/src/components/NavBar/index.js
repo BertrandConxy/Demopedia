@@ -12,7 +12,7 @@ export default function NavBar() {
           Countries
         </Link>
       </div>
-      <Link href={`/`} className="justify-self-end">
+      <Link href={`/add`} className="justify-self-end">
         <Button text="Add Country" />
       </Link>
     </div>
