@@ -1,6 +1,6 @@
 import Form from '../../components/Common/Form'
 import Back from '../../components/Common/Back'
-export default function Add() {
+export default function CountryAdd() {
   return (
     <div className="bg-white p-4 flex flex-col justify-between border border-1 border-gray-200 shadow-sm">
       <div className="flex items-end">

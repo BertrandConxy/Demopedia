@@ -10,18 +10,22 @@ export default function CountryCard() {
         <span className="text-blue-400 font-light">Area: 26,340 km²</span>
 
         <div className="mt-5 flex h-8">
-          <button className="text-blue-400 font-light hover:text-blue-700">
-            Delete
-          </button>
+          <Link href={`/delete/1`}>
+            <button className="text-blue-400 font-light hover:text-blue-700">
+              Delete
+            </button>
+          </Link>
           <Divider
             orientation="vertical"
             variant="middle"
             flexItem
             className="mx-2"
           />
-          <button className="text-blue-400 font-light hover:text-blue-700">
-            Edit
-          </button>
+          <Link href={`/edit/1`}>
+            <button className="text-blue-400 font-light hover:text-blue-700">
+              Edit
+            </button>
+          </Link>
         </div>
       </div>
       {/* Divider */}
