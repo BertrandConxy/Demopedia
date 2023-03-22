@@ -1,97 +1,225 @@
+<a name="readme-top"></a>
 
-![](https://img.shields.io/badge/Countries-blue)
+<div align="center">
 
-# Countries
+  <h3><b>Demopedia</b></h3>
 
-> Countries-app is an app that performs CRUD operations on a list of countries. It  is a fullstack application with both frontend and backend. Backend is created with apolllo server and express , data from mongodb. The frontend is created with Next js and tailwindcss for styling.
- 
-![image](https://user-images.githubusercontent.com/90524466/200921360-65855b4f-c756-46d0-89c3-fc6b706a0c89.png)
+</div>
 
+<!-- TABLE OF CONTENTS -->
 
-Additional description about the project and its features.
-## Built With
+# 📗 Table of Contents
 
-- Major languages (Javascript)
-- Framework/Libraries (Express js,React js,Next js,apollo-server,tailwindcss)
-- Technologies/tools used 
-  
-  ``` bash
-  - Apollo server
-  - Mongo db
-  - Git(version control)
-  - etc
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 \[Demopedia\] ](#-demopedia-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+      - [GraphQL API Server](#graphql-api-server)
+        - [MongoDb Atlas Set up](#mongodb-atlas-set-up)
+      - [Testing GrapQL API](#testing-grapql-api)
+      - [Running the Frontend](#running-the-frontend)
+    - [Run GraphQL query Tests](#run-graphql-query-tests)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-  ```
-  
-## Demo
+<!-- PROJECT DESCRIPTION -->
 
-- [Backend demo](https://drive.google.com/file/d/1pSA7_Hcb7q50EBRGcrPQqfYwvinzZ_67/view?usp=sharing)
-- [Frontend demo](https://www.loom.com/share/e5a2cc520a6c4b6485794bff6a625b46)
-## Getting Started
+# 📖 [Demopedia] <a name="about-project"></a>
 
-To get a local copy up and running follow these simple example steps.
+Demopedia is a Full stack web app which enables users to view countries demographic data. On top of that, they can perform CRUD operations on the database. Backend is implemented using the MongoDb Atlas, Apollo Server and GraphQL API. The Frontend is implemented using Next.js and Apollo Client.
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://nextjs.org/">Next.js</a></li>
+    <li><a href="https://www.apollographql.com/docs/react/">Apollo client</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary> Backend & Server</summary>
+  <ul>
+    <li><a href="https://www.apollographql.com/docs/apollo-server">Apollo Server</a></li>
+    <li><a href="https://cloud.mongodb.com/">MongoDB Atlas</a></li>
+    <li><a href="https://graphql.org/">GraphQL</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+- **GraphQL interface**
+- **View Country demographic**
+- **Creating, Updating and Deleting country data**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+Not yet deployed
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
- - A text editor(preferably Visual Studio Code)
- -  [Git](https://git-scm.com/downloads)
- -  [Node](https://nodejs.org/en/download/)
- - [MongoDb](https://www.mongodb.com/try/download/community)
-### Install
--  [Git](https://git-scm.com/downloads)
- - [Node](https://nodejs.org/en/download/)
- - [MongoDb](https://www.mongodb.com/try/download/community)
-### Project setup
 
-```bash
-$ git clone https://github.com/mugishasam123/countries
-.git
-$ cd countries
-$ Open your terminal and run npm install --prefix ./client to install client dependencies.
-$ Run npm install to install backend dependencies
+In order to run this project you need:
 
+- Nodejs
+- Yarn
+- MongoDB Atlas
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+  cd my-folder
+  git clone https://github.com/BertrandConxy/Demopedia.git
 ```
-### Database setup
 
-> - The database (`countries-app`) of this application will be created
-> - automatically locally when you run the app, so there is no configurations needed.
-> - The local database URI (which was used in the project) is `mongodb://localhost:27017/countries-app`.
-#### Run project
+### Install
 
-> - Run `npm run build` to build the application
-> - Run `npm run dev` to start the server
-> - Go to [http://localhost:5000/api/countries](http://localhost:5000/api/countries) to interact with
->   the graphql server api created by apollo and express.
-> - If you want to play with code and see the live updates
->   go to [http://localhost:3000](http://localhost:3000)
-> - Everytime you make updates to the code and want to see the updates live
->   in the "build version" of the application be sure to run
->   `npm run build` and start the server again.
+Install this project with:
 
+```sh
+  cd Demopedia
+  npm install
+```
 
-## Authors
+### Usage
 
-👤 ** Mugisha Samuel**
+#### GraphQL API Server
 
-- GitHub: [mugishasamuel](https://github.com/mugishasam123)
-- LinkedIn: [mugishasamuel](https://www.linkedin.com/in/mugisha-samuel-55a905208/)
-- Twitter: [mugishasamuel](https://twitter.com/mugishasamuel42/)
+##### MongoDb Atlas Set up
 
-<br>
+You will need DB URI to connect to the database. After setting up the MongoDb Atlas:
 
-## 🤝 Contributing
+- Create `.env` file.
+- Assign db URI to the DB_URI environment variable
+
+Run the server:
+
+```sh
+npm run server
+```
+
+You will get The following output:
+
+```sh
+🚀 Server ready at http://localhost:4000/api/countries
+Database connection successful!
+seed data was added successfully
+```
+
+#### Testing GrapQL API
+
+If you run the above url while the server is running, it will open up Apollo server sandbox:
+
+[image]
+
+#### Running the Frontend
+
+While the server is running, open another terminal and change the directory to `frontend`:
+
+```sh
+cd frontend
+```
+
+Install all the packages:
+
+```sh
+npm install
+```
+
+Run the development server:
+
+```sh
+npm run dev
+```
+
+### Run GraphQL query Tests
+
+To run tests, run the following command:
+
+```sh
+  npm run test
+```
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Bertrand Mutangana Ishimwe**
+
+- GitHub: [@BertrandConxy](https://github.com/BertrandConxy)
+- Twitter: [@Bconxy](https://twitter.com/BertrandMutanga)
+- LinkedIn: [Bertrand Mutangana Ishimwe](https://www.linkedin.com/in/bertrandmutangana)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **View more info about the country**
+- [ ] **Display Demographic data in charts**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/mugishasam123/countries/issues).
+Feel free to check the [issues page](https://github.com/BertrandConxy/Demopedia/issues/).
 
-<br>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Show your support
+<!-- SUPPORT -->
 
-Give a ⭐️ if you like this project!
+## ⭐️ Show your support <a name="support"></a>
 
-## 📝 License
+If you like this project, please don't hesitate to contact me so that we can see how we can improve it and please give it a star 😎
 
-This project is [MIT](https://opensource.org/licenses/MIT) licensed.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- ACKNOWLEDGEMENTS -->
 
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- I would like to thank Microverse
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
