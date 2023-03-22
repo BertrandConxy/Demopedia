@@ -4,7 +4,6 @@ import CircularProgress from '@mui/material/CircularProgress'
 
 export default function Home() {
   const { loading, countries, count } = useGetCountries()
-  console.log(countries)
 
   return (
     <div className="mt-10">
